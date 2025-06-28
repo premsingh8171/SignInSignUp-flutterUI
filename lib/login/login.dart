@@ -90,10 +90,16 @@ class LoginScreen extends StatelessWidget {
                   // Login logic here
                   print("Email: ${emailController.text}");
                   print("Password: ${passwordController.text}");
-                  if(emailController.text.isNotEmpty && passwordController.text.isNotEmpty){
-                    Navigator.pushReplacementNamed(context, '/dashboard');
-                  }else{
+                  if (emailController.text.isNotEmpty && passwordController.text.isNotEmpty) {
+                    // Navigate and replace the current screen
+                    //Navigator.pushNamed(context, '/dashboard');
+                    Navigator.pushNamedAndRemoveUntil(context, '/dashboard', (route) => false);
 
+                  } else {
+                    // Show error message or validation
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('Please enter email and password')),
+                    );
                   }
                 },
                 style: ElevatedButton.styleFrom(
@@ -107,7 +113,8 @@ class LoginScreen extends StatelessWidget {
               TextButton(
                 onPressed: () {
                   // Navigate to signup
-                  Navigator.pushReplacementNamed(context, 'signup');
+                  Navigator.pushNamed(context, '/signup');
+
                 },
                 child: Text("Don't have an account? Sign up"),
               ),

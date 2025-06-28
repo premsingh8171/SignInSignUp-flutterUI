@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import 'apifunction/apifunction.dart';
-import 'constant/constfile.dart';
-import 'model/apiobject.dart';
+import '../apifunction/apifunction.dart';
+import '../constant/constfile.dart';
+import '../model/apiobject.dart';
 
 
 
