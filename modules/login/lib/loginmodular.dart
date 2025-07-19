@@ -89,7 +89,7 @@ class LoginScreen2 extends StatelessWidget {
                   if (emailController.text.isNotEmpty && passwordController.text.isNotEmpty) {
                     // Navigate and replace the current screen
                     //Navigator.pushNamed(context, '/dashboard');
-                    Navigator.pushNamedAndRemoveUntil(context, '/dashboard', (route) => false);
+                    Navigator.pushNamedAndRemoveUntil(context, '/bottomnavigationbar', (route) => false);
 
                   } else {
                     // Show error message or validation
